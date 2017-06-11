@@ -61,7 +61,4 @@ ExpiresDefault "access 1 month"
         Header set Cache-Control "max-age=600, private, must-revalidate"
         Header append Vary: Accept-Encoding
     </FilesMatch>
-
-    Header unset ETag
-    Header unset Last-Modified
 </IfModule>
