@@ -1,4 +1,6 @@
-# Amruth Pillai's Resume on the Web
+<img src="https://user-images.githubusercontent.com/1134738/27010022-1c358f4c-4eb9-11e7-9c21-fd70c5a4737e.png" width="600px" alt="Amruth Pillai" />
+
+# Resume on the Web
 Everyone needs their own little spot on the interwebs, and this is mine.  
 **Welcome to my resume, on the web!**
 
