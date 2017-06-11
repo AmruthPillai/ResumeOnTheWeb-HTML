@@ -3,11 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="HandheldFriendly" content="true">
     <title>Amruth Pillai's Resume - Designer, Developer, Photographer, Writer</title>
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ffffff">
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
@@ -21,14 +29,56 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
+
+    <!-- FontAwesome -->
+    <script src="https://use.fontawesome.com/00134382b6.js"></script>
   </head>
   <body>
     <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div class="container">
-      <p>Everything is awesome!</p>
+    <div id="site">
+
+      <!-- Landing Page -->
+      <div id="landing-page">
+        <div class="landing-container d-flex flex-column justify-content-center">
+          <div class="photo d-flex justify-content-center">
+            <div class="hexagon">
+              <div class="hexTop"></div>
+              <div class="hexBottom"></div>
+            </div>
+          </div>
+          <div class="title text-center">
+            <img src="images/amruth-pillai.png" alt="Amruth Pillai">
+          </div>
+          <div class="subtitle text-center">Designer | Developer | Photographer | Writer</div>
+        </div>
+
+        <div class="landing-button d-flex justify-content-center" style="position: absolute; left: 50%; bottom: 2%;">
+          <div style="position: relative; left: -50%;">
+            <button id="scroll-more" type="button" class="btn btn-outline-primary">Scroll to know more&nbsp;&nbsp;<i class="fa fa-caret-down" aria-hidden="true"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <hr id="scroll-hook" class="my-4">
+
+      <div class="container">
+        <div class="row">
+
+          <!-- Left -->
+          <div class="col-sm-6 main-left">
+
+          </div>
+
+          <!-- Right -->
+          <div class="col-sm-6 main-right">
+
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <!-- TODO: Google Analytics -->

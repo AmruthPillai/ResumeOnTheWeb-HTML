@@ -1,0 +1,44 @@
+// Hexagon
+@import "../modules/hexagon.scss";
+
+// Fullscreen Height
+#landing-page {
+  height: 100vh;
+  background: url('../../images/symphony.png') repeat;
+
+  .landing-container {
+    height: 26.45em;
+
+    @media screen and (min-width: $retina-dm) {
+      height: 35.8em;
+    }
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-70%);
+
+    .title {
+      margin-top: 1em;
+
+      > img {
+        width: 320px;
+      }
+
+      @media screen and (min-width: $retina-dm) {
+        > img {
+          width: 440px;
+        }
+      }
+    }
+
+    .subtitle {
+      color: $gray-light;
+      margin-top: .5em;
+      font-size: .8em;
+
+      @media screen and (min-width: $retina-dm) {
+        font-size: 1em;
+      }
+    }
+  }
+}

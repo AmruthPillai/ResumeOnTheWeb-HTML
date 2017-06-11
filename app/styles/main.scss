@@ -1,3 +1,17 @@
 // bower:scss
-@import "bower_components/bootstrap/scss/bootstrap.scss";
+@import 'bower_components/bootstrap/scss/bootstrap.scss';
 // endbower
+
+// Nunito 400, 700 | Google Web Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+$custom-font: 'Nunito', $font-family-sans-serif;
+
+// Custom Variables
+@import 'modules/variables.scss';
+
+// Site-wide Styles
+body { font-family: $custom-font; }
+.btn { font-family: $custom-font; }
+
+// Import Page Styles
+@import 'pages/landing-page.scss';
