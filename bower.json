@@ -3,7 +3,8 @@
   "private": true,
   "dependencies": {
     "bootstrap": "~4.0.0-alpha.6",
-    "modernizr": "~2.8.1"
+    "modernizr": "~2.8.1",
+    "switchery": "^0.8.2"
   },
   "devDependencies": {
     "chai": "^4.0.2",

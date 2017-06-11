@@ -39,6 +39,16 @@
       @media screen and (min-width: $retina-dm) {
         font-size: 1em;
       }
+
+      .designer     { transition: all .25s ease; }
+      .developer    { transition: all .25s ease; }
+      .photographer { transition: all .25s ease; }
+      .writer       { transition: all .25s ease; }
+
+      .designer:hover     { color: $green; transition: all .25s ease; }
+      .developer:hover    { color: $orange; transition: all .25s ease; }
+      .photographer:hover { color: $pink; transition: all .25s ease; }
+      .writer:hover       { color: $red; transition: all .25s ease; }
     }
   }
 }

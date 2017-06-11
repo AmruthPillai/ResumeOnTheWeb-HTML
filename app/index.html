@@ -19,6 +19,7 @@
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/switchery/dist/switchery.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -43,7 +44,7 @@
       <!-- Landing Page -->
       <div id="landing-page">
         <div class="landing-container d-flex flex-column justify-content-center">
-          <div class="photo d-flex justify-content-center">
+          <div class="photo" style="margin: 0 auto;">
             <div class="hexagon">
               <div class="hexTop"></div>
               <div class="hexBottom"></div>
@@ -52,12 +53,14 @@
           <div class="title text-center">
             <img src="images/amruth-pillai.png" alt="Amruth Pillai">
           </div>
-          <div class="subtitle text-center">Designer | Developer | Photographer | Writer</div>
+          <div class="subtitle text-center">
+            <span class="designer">Designer</span> | <span class="developer">Developer</span> | <span class="photographer">Photographer</span> | <span class="writer">Writer</span>
+          </div>
         </div>
 
         <div class="landing-button d-flex justify-content-center" style="position: absolute; left: 50%; bottom: 2%;">
           <div style="position: relative; left: -50%;">
-            <button id="scroll-more" type="button" class="btn btn-outline-primary">Scroll to know more&nbsp;&nbsp;<i class="fa fa-caret-down" aria-hidden="true"></i></button>
+            <button id="scroll-to-content" type="button" class="btn btn-outline-primary">Scroll to know more&nbsp;&nbsp;<i class="fa fa-caret-down" aria-hidden="true"></i></button>
           </div>
         </div>
       </div>
@@ -66,18 +69,118 @@
 
       <div class="container">
         <div class="row">
+          <div class="col-sm-2 offset-sm-9">
+            <label for="resume-switch" class="small">Do you want the complete resume experience?</label>
+          </div>
+          <div class="col-sm-1">
+            <input id="resume-switch" type="checkbox" checked />
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-4">
+
+      <div class="container">
+        <div class="row">
 
           <!-- Left -->
           <div class="col-sm-6 main-left">
+
+            <!-- About -->
+            <div class="section">
+              <h6 class="heading">About Me</h6>
+              <div class="content"></div>
+            </div>
+
+            <!-- Personal Statement -->
+            <div class="section resume-section">
+              <h6 class="heading">Personal Statement</h6>
+              <div class="content">
+                <p>A highly motivated and hard working individual who is interested in all things out-of-the-box and creative, looking to start a career in web and mobile design and development. Eventual career goal is to establish a good network and rapport with those surrounding me.</p>
+              </div>
+            </div>
+
+            <!-- Skills -->
+            <div class="section">
+              <h6 class="heading">Skills</h6>
+              <div class="content"></div>
+            </div>
+
+            <!-- Languages -->
+            <div class="section resume-section">
+              <h6 class="heading">Languages</h6>
+              <div class="content"></div>
+            </div>
+
+            <!-- Hobbies & Interests -->
+            <div class="section">
+              <h6 class="heading">Hobbies &amp; Interests</h6>
+              <div class="content"></div>
+            </div>
+
+            <!-- Volunteer Work -->
+            <div class="section resume-section">
+              <h6 class="heading">Volunteer Work</h6>
+              <div class="content"></div>
+            </div>
 
           </div>
 
           <!-- Right -->
           <div class="col-sm-6 main-right">
 
+            <!-- Blog -->
+            <div class="section">
+              <h6 class="heading">Blog</h6>
+              <div class="content"></div>
+            </div>
+
+            <!-- Education -->
+            <div class="section resume-section">
+              <h6 class="heading">Education</h6>
+              <div class="content"></div>
+            </div>
+
+            <!-- Work Experience -->
+            <div class="section">
+              <h6 class="heading resume-section">Work Exprience</h6>
+              <div class="content"></div>
+            </div>
+
+            <!-- Projects -->
+            <div class="section">
+              <h6 class="heading">Projects</h6>
+              <div class="content"></div>
+            </div>
+
+            <!-- Instagram -->
+            <div class="section">
+              <h6 class="heading">Instagram</h6>
+              <div class="content"></div>
+            </div>
+
+            <!-- Achievements -->
+            <div class="section">
+              <h6 class="heading resume-section">Achievements</h6>
+              <div class="content"></div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="section">
+              <h6 class="heading resume-section">Certifications</h6>
+              <div class="content"></div>
+            </div>
+
           </div>
         </div>
       </div>
+
+      <footer>
+        <p><img src="images/amruth-pillai.png" alt="Amruth Pillai" width="10%"></p>
+        <p>Resume on the Web<br>
+          <span class="small">Copyright &copy; 2017 All Rights Reserved.</span></p>
+        <button id="scroll-to-top" type="button" class="btn btn-sm btn-outline-secondary">Scroll to top&nbsp;&nbsp;<i class="fa fa-caret-up" aria-hidden="true"></i></button>
+      </footer>
 
     </div>
 
@@ -88,6 +191,9 @@
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/tether/dist/js/tether.js"></script>
     <script src="/bower_components/modernizr/modernizr.js"></script>
+    <script src="/bower_components/transitionize/dist/transitionize.js"></script>
+    <script src="/bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="/bower_components/switchery/dist/switchery.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

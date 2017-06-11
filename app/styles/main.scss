@@ -3,15 +3,37 @@
 // endbower
 
 // Nunito 400, 700 | Google Web Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
-$custom-font: 'Nunito', $font-family-sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,900');
+$custom-font: 'Open Sans', $font-family-sans-serif;
 
 // Custom Variables
 @import 'modules/variables.scss';
 
 // Site-wide Styles
+* { transition: all .25s ease; }
 body { font-family: $custom-font; }
 .btn { font-family: $custom-font; }
+.hidden { display: none; }
 
-// Import Page Styles
-@import 'pages/landing-page.scss';
+// Import Individual Section Styles
+@import 'sections/landing-page.scss';
+@import 'sections/main-left.scss';
+@import 'sections/main-right.scss';
+@import 'sections/footer.scss';
+
+// Content Styles
+.section {
+
+  .heading {
+    color: $heading-gray;
+    font-size: .8em;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  .content {
+    text-align: justify;
+    font-size: 1em;
+    line-height: 2em;
+  }
+}
