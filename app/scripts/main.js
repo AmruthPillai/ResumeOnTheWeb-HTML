@@ -8,6 +8,10 @@ $.fn.preload = function() {
 const photos = ['IMG_3522', 'IMG_1880', 'IMG_8295', 'IMG_5184', 'IMG_8286', 'IMG_4861'];
 
 $(document).ready(function() {
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  });
+
   $(photos).preload();
 
   $('.hexagon').css({'background-image':'url(\'../../images/photos/'+photos[0]+'.jpg\')'});
@@ -32,7 +36,7 @@ $('#scroll-to-top').click(function() {
 });
 
 var resumeSwitch = document.querySelector('#resume-switch');
-var resumeSwitchInit = new Switchery(resumeSwitch, { color: '#444' });
+var resumeSwitchInit = new Switchery(resumeSwitch, { color: '#d9534f' });
 resumeSwitch.onchange = function() {
   if (resumeSwitch.checked) {
     $('.resume-section').show();

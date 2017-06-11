@@ -7,15 +7,15 @@
   background: url('../../images/symphony.png') repeat;
 
   .landing-container {
-    height: 26.45em;
+    height: 30em;
 
     @media screen and (min-width: $retina-dm) {
-      height: 35.8em;
+      height: 50em;
     }
 
     position: relative;
     top: 50%;
-    transform: translateY(-70%);
+    transform: translateY(-60%);
 
     .title {
       margin-top: 1em;
@@ -49,6 +49,27 @@
       .developer:hover    { color: $orange; transition: all .25s ease; }
       .photographer:hover { color: $pink; transition: all .25s ease; }
       .writer:hover       { color: $red; transition: all .25s ease; }
+    }
+
+    .social-icons {
+      margin-top: 20px;
+
+      .icon {
+        width:  1.5em;
+        height: 1.5em;
+        margin: 0 .4em;
+        filter: grayscale(100%);
+
+        &:hover {
+          filter: grayscale(0%);
+        }
+
+        @media screen and (min-width: $retina-dm) {
+          width:  1.75em;
+          height: 1.75em;
+          margin: 0 .6em;
+        }
+      }
     }
   }
 }

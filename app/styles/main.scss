@@ -11,7 +11,7 @@ $custom-font: 'Open Sans', $font-family-sans-serif;
 
 // Site-wide Styles
 * { transition: all .25s ease; }
-body { font-family: $custom-font; }
+html, body { font-family: $custom-font; }
 .btn { font-family: $custom-font; }
 .hidden { display: none; }
 
@@ -23,17 +23,21 @@ body { font-family: $custom-font; }
 
 // Content Styles
 .section {
+  padding-bottom: 10px;
+  // border-bottom: 1px solid $gray-lighter;
 
   .heading {
     color: $heading-gray;
     font-size: .8em;
     font-weight: 900;
     text-transform: uppercase;
+    padding-bottom: 5px;
+    border-bottom: 1px solid $gray-lightest;
   }
 
   .content {
     text-align: justify;
-    font-size: 1em;
-    line-height: 2em;
+    font-size: .9em;
+    line-height: 1.8em;
   }
 }
