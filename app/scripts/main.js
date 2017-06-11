@@ -1,6 +1,15 @@
+// Preload Images
+$.fn.preload = function() {
+    this.each(function(){
+        $('<img />')[0].src = '../../images/photos/' + this + '.jpg';
+    });
+}
+
 const photos = ['IMG_3522', 'IMG_1880', 'IMG_8295', 'IMG_5184', 'IMG_8286', 'IMG_4861'];
 
 $(document).ready(function() {
+  $(photos).preload();
+
   $('.hexagon').css({'background-image':'url(\'../../images/photos/'+photos[0]+'.jpg\')'});
   var i = 1;
   setInterval(function() {
