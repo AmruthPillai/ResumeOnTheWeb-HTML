@@ -1,7 +1,7 @@
 // Preload Images
 $.fn.preload = function() {
     this.each(function(){
-        $('<img />')[0].src = '../../images/photos/' + this + '.jpg';
+        $('<img />')[0].src = 'http://cdn.amruthpillai.com/images/photos/' + this + '.jpg';
     });
 }
 
@@ -14,10 +14,10 @@ $(document).ready(function() {
 
   $(photos).preload();
 
-  $('.hexagon').css({'background-image':'url(\'../../images/photos/'+photos[0]+'.jpg\')'});
+  $('.hexagon').css({'background-image':'url(\'http://cdn.amruthpillai.com/images/photos/'+photos[0]+'.jpg\')'});
   var i = 1;
   setInterval(function() {
-    $('.hexagon').css({'background-image':'url(\'../../images/photos/'+photos[i]+'.jpg\')'});
+    $('.hexagon').css({'background-image':'url(\'http://cdn.amruthpillai.com/images/photos/'+photos[i]+'.jpg\')'});
     i++;
     if (i >= photos.length) i = 0;
   }, 5000);
