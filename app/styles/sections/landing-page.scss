@@ -20,12 +20,10 @@
     .title {
       margin-top: 1em;
 
-      > img {
+      > h1 a img {
         width: 320px;
-      }
 
-      @media screen and (min-width: $retina-dm) {
-        > img {
+        @media screen and (min-width: $retina-dm) {
           width: 440px;
         }
       }
