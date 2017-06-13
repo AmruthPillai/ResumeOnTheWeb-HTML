@@ -84,13 +84,14 @@
       flex: 0 1 100%;
     }
 
+    .photos  { fill: $red; color: $red; }
+    .writing { fill: $orange; color: $orange; }
+    .movies  { fill: $green; color: $green; }
+    .music   { fill: $blue; color: $blue; }
+    .travel  { fill: $teal; color: $teal; }
+    .sports  { fill: $purple; color: $purple; }
+
     &:hover {
-      .photos  { fill: $red; color: $red;       }
-      .writing { fill: $orange; color: $orange; }
-      .movies  { fill: $yellow; color: $yellow; }
-      .music   { fill: $green; color: $green;   }
-      .travel  { fill: $teal; color: $teal;     }
-      .sports  { fill: $blue; color: $blue;     }
 
 
       svg {
