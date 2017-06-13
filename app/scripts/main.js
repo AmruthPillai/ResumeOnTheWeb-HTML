@@ -100,7 +100,7 @@ $(function() {
         output += '<a href="' + item.link + '" class="list-group-item list-group-item-action flex-column align-items-start">\
             <div class="d-flex w-100 justify-content-between">\
               <img class="blog-image" src="' + src + '" />\
-              <p class="blog-title">' + trimmedTitle + '</p>\
+              <p class="blog-title">' + trimmedTitle + '&nbsp;&nbsp;<small><i class="fa fa-external-link" aria-hidden="true"></i></small></p>\
               <small class="blog-date">' + jQuery.format.date(item.pubDate, "d MMM \''yy") + '</small>\
             </div>\
           </a>';

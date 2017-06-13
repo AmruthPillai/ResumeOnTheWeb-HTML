@@ -12,7 +12,7 @@ $custom-font: 'Open Sans', $font-family-sans-serif;
 // Site-wide Styles
 * { transition: all .25s ease; }
 html, body { font-family: $custom-font; }
-strong { font-weight: 700; }
+strong { font-weight: 600; }
 p { text-align: justify; @include media-breakpoint-down(sm) { text-align-last: center; } }
 .btn { font-family: $custom-font; }
 .hidden { display: none; }
@@ -47,6 +47,16 @@ p { text-align: justify; @include media-breakpoint-down(sm) { text-align-last: c
     font-size: .8em;
     line-height: 1.8em;
 
+    .list-group-item {
+      &:hover {
+        padding: 30px 20px;
+      }
+
+      h6 {
+        font-weight: 500;
+      }
+    }
+
     .section-icon {
       @include media-breakpoint-up(lg) {
         float: left;
@@ -61,9 +71,27 @@ p { text-align: justify; @include media-breakpoint-down(sm) { text-align-last: c
 
     h6 {
       color: $gray;
+      font-weight: 600;
 
       @include media-breakpoint-down(lg) {
         text-align: center;
+      }
+    }
+
+    .borderless li {
+      border: 0;
+      padding: 0;
+
+      &:hover {
+        padding: 15px 0;
+      }
+
+      p {
+        margin-top: -6px;
+
+        strong {
+          font-weight: 800;
+        }
       }
     }
   }

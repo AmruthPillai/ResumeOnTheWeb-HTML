@@ -1,26 +1,86 @@
 #blog {
-  .blog-image {
-    width: 64px;
-    height: 64px;
-    object-fit: cover;
-  }
-
-  .blog-title {
-    font-size: 1.1em;
-    line-height: 1.6em;
-    position: absolute;
-    left: 7em;
-    width: 50%;
-  }
-
-  @include media-breakpoint-down(lg) {
-    .blog-title {
-      font-size: .9em;
-      line-height: 1.4em;
-      left: 8em;
-      width: 60%
+  .list-group-item {
+    .blog-image {
+      width: 128px;
+      height: 64px;
+      object-fit: cover;
+      filter: grayscale(100%);
     }
 
-    .blog-date { display: none;}
+    .blog-title {
+      text-align: left;
+      font-size: 1.1em;
+      line-height: 1.4em;
+      position: absolute;
+      left: 11.5em;
+      width: 50%;
+    }
+
+    .blog-date {
+      opacity: .25;
+    }
+
+    @include media-breakpoint-down(lg) {
+      .blog-title {
+        font-size: .9em;
+        line-height: 1.4em;
+        left: 8em;
+        width: 60%
+      }
+
+      .blog-date { display: none; }
+    }
+
+    &:hover {
+      .blog-image { height: 128px; filter: grayscale(0%); }
+      .blog-title { color: $red; }
+      .blog-date { opacity: 1; }
+    }
+  }
+}
+
+#education {
+  .list-group-item {
+    .school {
+      font-size: 1.2em;
+      font-weight: 600;
+
+      span {
+        font-weight: 500;
+        font-size: .7em;
+      }
+
+      @include media-breakpoint-down(lg) {
+        font-size: 1em;
+
+        span { display: none; }
+      }
+    }
+
+    .percentile {
+      opacity: .25;
+      margin-top: 5px;
+      font-size: 1.4em;
+
+      @include media-breakpoint-down(lg) {
+        display: none;
+      }
+    }
+
+    .major {
+      text-align: left;
+      margin-top: -5px;
+
+      @include media-breakpoint-down(lg) {
+        margin-top: 0;
+        font-size: .9em;
+      }
+    }
+
+    &:hover {
+      .percentile {
+        opacity: 1;
+      }
+    }
   }
 }
