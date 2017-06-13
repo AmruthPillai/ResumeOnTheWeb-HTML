@@ -1,4 +1,26 @@
-.main-right {
-  // height: calc(100vh * 2);
-  // background-color: $green;
+#blog {
+  .blog-image {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+  }
+
+  .blog-title {
+    font-size: 1.1em;
+    line-height: 1.6em;
+    position: absolute;
+    left: 7em;
+    width: 50%;
+  }
+
+  @include media-breakpoint-down(lg) {
+    .blog-title {
+      font-size: .9em;
+      line-height: 1.4em;
+      left: 8em;
+      width: 60%
+    }
+
+    .blog-date { display: none;}
+  }
 }

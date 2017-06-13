@@ -25,7 +25,7 @@ p { text-align: justify; @include media-breakpoint-down(sm) { text-align-last: c
 
 // Content Styles
 .section {
-  padding-bottom: 10px;
+  margin-bottom: 20px;
 
   &:hover {
     .heading {
@@ -61,6 +61,10 @@ p { text-align: justify; @include media-breakpoint-down(sm) { text-align-last: c
 
     h6 {
       color: $gray;
+
+      @include media-breakpoint-down(lg) {
+        text-align: center;
+      }
     }
   }
 }

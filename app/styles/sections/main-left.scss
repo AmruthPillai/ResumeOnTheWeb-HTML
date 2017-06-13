@@ -49,8 +49,6 @@
       }
     }
   }
-
-  margin-bottom: 10px;
 }
 
 #hobbies {
@@ -99,8 +97,6 @@
       }
     }
   }
-
-  margin-bottom: 10px;
 }
 
 #volunteer-work {
@@ -108,10 +104,6 @@
     h6 {
       margin-top: 5px;
       font-weight: 600;
-
-      @include media-breakpoint-down(sm) {
-        text-align: center;
-      }
     }
 
     p {

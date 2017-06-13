@@ -78,3 +78,35 @@ var resumeSwitchInit = new Switchery(resumeSwitch, { color: '#d9534f' });
 resumeSwitch.onchange = function() {
   $('.resume-section').fadeToggle('slow');
 }
+
+// Medium RSS to JSON
+$(function() {
+  var $content = $('#blog-content');
+  var data = { rss_url: 'https://medium.com/feed/amruth-pillai/' };
+
+  $.get('https://api.rss2json.com/v1/api.json', data, function(response) {
+    if (response.status == 'ok') {
+      var output = '<ul class="list-group">';
+      $.each(response.items, function(k, item) {
+        var tagIndex = item.description.indexOf('<img'); // Find where the img tag starts
+				var srcIndex = item.description.substring(tagIndex).indexOf('src=') + tagIndex; // Find where the src attribute starts
+				var srcStart = srcIndex + 5; // Find where the actual image URL starts; 5 for the length of 'src="'
+				var srcEnd = item.description.substring(srcStart).indexOf('"') + srcStart; // Find where the URL ends
+				var src = item.description.substring(srcStart, srcEnd); // Extract just the URL
+
+        var trimmedTitle = item.title.substr(0, 100); //trim the string to the maximum length
+				trimmedTitle = trimmedTitle.substr(0, Math.max(trimmedTitle.length, trimmedTitle.lastIndexOf(" "))); //re-trim if we are in the middle of a word
+
+        output += '<a href="' + item.link + '" class="list-group-item list-group-item-action flex-column align-items-start">\
+            <div class="d-flex w-100 justify-content-between">\
+              <img class="blog-image" src="' + src + '" />\
+              <p class="blog-title">' + trimmedTitle + '</p>\
+              <small class="blog-date">' + item.pubDate + '</small>\
+            </div>\
+          </a>';
+        return k < 4;
+      });
+      $content.html(output);
+    }
+  });
+});
