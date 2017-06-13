@@ -3,7 +3,7 @@
 // endbower
 
 // Open Sans 400, 700 , 900 | Google Web Fonts
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
 $custom-font: 'Open Sans', $font-family-sans-serif;
 
 // Custom Modules
@@ -13,6 +13,7 @@ $custom-font: 'Open Sans', $font-family-sans-serif;
 * { transition: all .25s ease; }
 html, body { font-family: $custom-font; }
 strong { font-weight: 700; }
+p { text-align: justify; @include media-breakpoint-down(sm) { text-align-last: center; } }
 .btn { font-family: $custom-font; }
 .hidden { display: none; }
 
@@ -45,5 +46,21 @@ strong { font-weight: 700; }
     text-align: justify;
     font-size: .8em;
     line-height: 1.8em;
+
+    .section-icon {
+      @include media-breakpoint-up(lg) {
+        float: left;
+        padding: 5px 0 0 10px;
+      }
+
+      svg {
+        width: 3em;
+        height: 3em;
+      }
+    }
+
+    h6 {
+      color: $gray;
+    }
   }
 }

@@ -83,17 +83,10 @@
       opacity: 0;
       flex: 0 1 100%;
       font-size: .8em;
-      font-weight: 700;
+      font-weight: 900;
       text-transform: uppercase;
       color: $gray-light;
     }
-
-    .photos  { fill: $red; }
-    .writing { fill: $orange; }
-    .movies  { fill: $green; }
-    .music   { fill: $blue; }
-    .travel  { fill: $teal; }
-    .sports  { fill: $purple; }
 
     &:hover {
       svg {
@@ -108,4 +101,21 @@
   }
 
   margin-bottom: 10px;
+}
+
+#volunteer-work {
+  .content {
+    h6 {
+      margin-top: 5px;
+      font-weight: 600;
+
+      @include media-breakpoint-down(sm) {
+        text-align: center;
+      }
+    }
+
+    p {
+      margin-top: -5px;
+    }
+  }
 }
