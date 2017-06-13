@@ -1,4 +1,40 @@
-.main-left {
-  // height: calc(100vh * 2);
-  // background-color: $red;
+#about-me {
+  .inline-amruth-pillai {
+    height: 1.5em;
+    margin: 0 4px;
+  }
+}
+
+#skills {
+  div ul {
+    padding: 0;
+    list-style: none;
+
+    li {
+      &:hover {
+        padding-left: 4px;
+      }
+
+      span {
+        &:first-child {
+
+        }
+
+        &:last-child {
+          position: relative;
+          top: -4px;
+          font-size: .85em;
+        }
+      }
+    }
+  }
+}
+
+#languages {
+  .percircle {
+    span {
+      top: 42%;
+      font-size: .15em;
+    }
+  }
 }

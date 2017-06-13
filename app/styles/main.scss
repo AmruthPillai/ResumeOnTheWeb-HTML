@@ -6,12 +6,13 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,900');
 $custom-font: 'Open Sans', $font-family-sans-serif;
 
-// Custom Variables
+// Custom Modules
 @import 'modules/variables.scss';
 
 // Site-wide Styles
 * { transition: all .25s ease; }
 html, body { font-family: $custom-font; }
+strong { font-weight: 700; }
 .btn { font-family: $custom-font; }
 .hidden { display: none; }
 
@@ -25,6 +26,12 @@ html, body { font-family: $custom-font; }
 .section {
   padding-bottom: 10px;
 
+  &:hover {
+    .heading {
+      color: $red;
+    }
+  }
+
   .heading {
     color: $heading-gray;
     font-size: .8em;
@@ -36,7 +43,7 @@ html, body { font-family: $custom-font; }
 
   .content {
     text-align: justify;
-    font-size: .9em;
+    font-size: .8em;
     line-height: 1.8em;
   }
 }

@@ -6,6 +6,21 @@
   height: 100vh;
   background: url('../../images/lightpaperfibers.png') repeat;
 
+  nav {
+    position: absolute;
+    margin-top: 5px;
+    left: 50%;
+
+    .nav {
+      position: relative;
+      left: -50%;
+
+      li a {
+        font-size: .75em;
+      }
+    }
+  }
+
   .landing-container {
     height: 30em;
 
@@ -15,7 +30,7 @@
 
     position: relative;
     top: 50%;
-    transform: translateY(-60%);
+    transform: translateY(-55%);
 
     .title {
       margin-top: 1em;
