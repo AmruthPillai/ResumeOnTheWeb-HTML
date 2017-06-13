@@ -34,7 +34,7 @@ $(document).ready(function() {
     percent: 50
   });
 
-  window.ScrollReveal().reveal('.section', { origin: 'top' });
+  // window.ScrollReveal().reveal('.section', { origin: 'top' });
 
   $(photos).preload();
 
@@ -81,7 +81,7 @@ resumeSwitch.onchange = function() {
 
 // Medium RSS to JSON
 $(function() {
-  var $content = $('#blog-content');
+  var $blog_content = $('#blog-content');
   var data = { rss_url: 'https://medium.com/feed/amruth-pillai/' };
 
   $.get('https://api.rss2json.com/v1/api.json', data, function(response) {
@@ -97,16 +97,36 @@ $(function() {
         var trimmedTitle = item.title.substr(0, 100); //trim the string to the maximum length
 				trimmedTitle = trimmedTitle.substr(0, Math.max(trimmedTitle.length, trimmedTitle.lastIndexOf(" "))); //re-trim if we are in the middle of a word
 
-        output += '<a href="' + item.link + '" class="list-group-item list-group-item-action flex-column align-items-start">\
+        output += '<a href="' + item.link + '"target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">\
             <div class="d-flex w-100 justify-content-between">\
               <img class="blog-image" src="' + src + '" />\
-              <p class="blog-title">' + trimmedTitle + '&nbsp;&nbsp;<small><i class="fa fa-external-link" aria-hidden="true"></i></small></p>\
+              <span class="blog-title">' + trimmedTitle + '&nbsp;&nbsp;<small><i class="fa fa-external-link" aria-hidden="true"></i></small></span>\
               <small class="blog-date">' + jQuery.format.date(item.pubDate, "d MMM \''yy") + '</small>\
             </div>\
           </a>';
         return k < 4;
       });
-      $content.html(output);
+      output += '</ul>';
+      $blog_content.html(output);
+    }
+  });
+});
+
+$(function() {
+  var $instagram_content = $('#instagram-content');
+
+  $.ajax({
+    url: 'https://igapi.ga/amruthpillai/media/',
+    type: 'GET',
+    crossDomain: true,
+    dataType: 'jsonp',
+    success: function(response) {
+      var output = '';
+      $.each(response.items, function(k, item) {
+        output += '<div class="insta-box"><a href="' + item.link + '" target="_blank"><img src="' + item.images.thumbnail.url + '" /></a></div>';
+        return k < 7;
+      });
+      $instagram_content.html(output);
     }
   });
 });

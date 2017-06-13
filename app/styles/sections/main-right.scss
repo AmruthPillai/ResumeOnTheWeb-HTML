@@ -21,6 +21,10 @@
     }
 
     @include media-breakpoint-down(lg) {
+      .blog-image {
+        width: 64px;
+      }
+
       .blog-title {
         font-size: .9em;
         line-height: 1.4em;
@@ -42,6 +46,7 @@
 #education {
   .list-group-item {
     .school {
+      text-align: left;
       font-size: 1.2em;
       font-weight: 600;
 
@@ -81,6 +86,39 @@
       .percentile {
         opacity: 1;
       }
+    }
+  }
+}
+
+#instagram {
+  #instagram-content {
+    display: inline-flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .insta-box {
+      background-color: $black;
+      margin: 5px 0;
+
+      a {
+
+        img {
+          position: relative;
+          z-index: 2;
+          width: 128px;
+          height: 128px;
+
+          &:hover {
+            opacity: .5;
+          }
+        }
+
+      }
+    }
+
+    @include media-breakpoint-down(lg) {
+      margin: 0 auto;
     }
   }
 }
