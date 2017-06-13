@@ -16,10 +16,6 @@
       }
 
       span {
-        &:first-child {
-
-        }
-
         &:last-child {
           position: relative;
           top: -4px;
@@ -31,10 +27,24 @@
 }
 
 #languages {
+  .row {
+    @media screen and (min-width: $screen-dm) {
+      justify-content: space-around;
+      margin: 0 50px;
+    }
+  }
   .percircle {
+    background-color: #f5f5f5;
+
+    &:after {
+      background-color: #fff;
+    }
+
     span {
       top: 42%;
       font-size: .15em;
     }
   }
+
+  margin-bottom: 10px;
 }
