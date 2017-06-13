@@ -34,6 +34,8 @@ $(document).ready(function() {
     percent: 50
   });
 
+  window.ScrollReveal().reveal('.section', { origin: 'top' });
+
   $(photos).preload();
 
   $('.hexagon').css({'background-image':'url(\'http://cdn.amruthpillai.com/images/photos/'+photos[0]+'.jpg\')'});
