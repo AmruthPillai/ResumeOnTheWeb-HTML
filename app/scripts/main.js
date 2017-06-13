@@ -8,10 +8,7 @@ $.fn.preload = function() {
 const photos = ['IMG_3522', 'IMG_1880', 'IMG_8295', 'IMG_5184', 'IMG_8286', 'IMG_4861'];
 
 $(document).ready(function() {
-  $(function () {
-    $("#english-percircle").percircle();
-    $('[data-toggle="tooltip"]').tooltip()
-  });
+  $('[data-toggle="tooltip"]').tooltip();
 
   $('#english-percircle').percircle({
     progressBarColor: '#d9534f',
@@ -20,7 +17,7 @@ $(document).ready(function() {
   });
 
   $('#tamil-percircle').percircle({
-    progressBarColor: '#0275d8',
+    progressBarColor: '#f0ad4e',
     text: 'Tamil',
     percent: 75
   });
@@ -29,6 +26,12 @@ $(document).ready(function() {
     progressBarColor: '#5cb85c',
     text: 'Kannada',
     percent: 75
+  });
+
+  $('#hindi-percircle').percircle({
+    progressBarColor: '#5bc0de',
+    text: 'Hindi',
+    percent: 50
   });
 
   $(photos).preload();

@@ -59,7 +59,7 @@
   }
 }
 
-@media screen and (min-width: $retina-dm) {
+@include media-breakpoint-up(xl) {
   .hexagon {
     width: 350px;
     height: 202.07px;
