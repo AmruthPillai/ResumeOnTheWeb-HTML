@@ -101,7 +101,7 @@ $(function() {
             <div class="d-flex w-100 justify-content-between">\
               <img class="blog-image" src="' + src + '" />\
               <p class="blog-title">' + trimmedTitle + '</p>\
-              <small class="blog-date">' + item.pubDate + '</small>\
+              <small class="blog-date">' + jQuery.format.date(item.pubDate, "d MMM \''yy") + '</small>\
             </div>\
           </a>';
         return k < 4;
