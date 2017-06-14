@@ -53,6 +53,7 @@ p { text-align: justify; @include media-breakpoint-down(sm) { text-align-last: c
       }
 
       h6 {
+        font-size: 1.2em;
         font-weight: 500;
       }
     }
