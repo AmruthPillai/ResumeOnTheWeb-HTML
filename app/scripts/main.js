@@ -34,7 +34,12 @@ $(document).ready(function() {
     percent: 50
   });
 
-  // window.ScrollReveal().reveal('.section', { origin: 'top' });
+  window.ScrollReveal().reveal('.section', { origin: 'top' });
+
+  $('#project-tabs a').click(function (e) {
+    e.preventDefault()
+    $(this).tab('show')
+  });
 
   $(photos).preload();
 
@@ -45,20 +50,6 @@ $(document).ready(function() {
     i++;
     if (i >= photos.length) i = 0;
   }, 5000);
-
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
-    if (this.hash !== "") {
-      event.preventDefault();
-      var hash = this.hash;
-
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 'slow', function(){
-        window.location.hash = hash;
-      });
-    }
-  });
 });
 
 $('#scroll-to-content').click(function() {

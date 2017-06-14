@@ -129,6 +129,21 @@
     .period { font-size: .9em; }
     .position { font-size: .9em; margin-top: -3px; font-weight: 600; }
     .specialization { font-size: .9em; }
+  }
+}
 
+#projects {
+  .nav-link {
+    text-align: center;
+  }
+
+  .tab-pane {
+    padding: 10px;
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: auto;
   }
 }
