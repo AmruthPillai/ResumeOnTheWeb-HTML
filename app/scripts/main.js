@@ -36,11 +36,6 @@ $(document).ready(function() {
 
   window.ScrollReveal().reveal('.section', { origin: 'top' });
 
-  $('#project-tabs a').click(function (e) {
-    e.preventDefault()
-    $(this).tab('show');
-  });
-
   $(photos).preload();
 
   $('.hexagon').css({'background-image':'url(\'http://cdn.amruthpillai.com/images/photos/'+photos[0]+'.jpg\')'});
@@ -50,6 +45,16 @@ $(document).ready(function() {
     i++;
     if (i >= photos.length) i = 0;
   }, 5000);
+});
+
+$('footer .pp-link a').click(function (e) {
+  e.preventDefault()
+  $('#privacy-policy').modal('show');
+});
+
+$('#project-tabs a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show');
 });
 
 $('#scroll-to-content').click(function() {
@@ -112,6 +117,73 @@ $(function() {
         return k < 7;
       });
       $instagram_content.html(output);
+    }
+  });
+});
+
+// Contact Form
+jQuery.validator.addMethod('answercheck', function (value, element) {
+  return this.optional(element) || /^\bseven\b$/.test(value);
+}, "type the correct answer -_-");
+
+$(function() {
+  $('#contact-form').validate({
+    rules: {
+      name: {
+        required: true,
+        minlength: 2
+      },
+      email: {
+        required: true,
+        email: true
+      },
+      message: {
+        required: true
+      },
+      answer: {
+        required: true,
+        answercheck: true
+      }
+    },
+
+    messages: {
+      name: {
+        required: "come on, you have a name don't you?",
+        minlength: "your name must consist of at least 2 characters"
+      },
+      email: {
+        required: "no email, no message"
+      },
+      message: {
+        required: "um...yea, you have to write something to send this form.",
+        minlength: "thats all? really?"
+      },
+      answer: {
+        required: "sorry, wrong answer!"
+      }
+    },
+
+    submitHandler: function(form) {
+      $(form).ajaxSubmit({
+        type: "POST",
+        data: $(form).serialize(),
+        url: "contact.php",
+
+        success: function() {
+          $('#contact :input').attr('disabled', 'disabled');
+          $('#contact').fadeTo( "slow", 0.15, function() {
+            $(this).find(':input').attr('disabled', 'disabled');
+            $(this).find('label').css('cursor','default');
+            $('#success').fadeIn();
+          });
+        },
+
+        error: function() {
+          $('#contact').fadeTo( "slow", 0.15, function() {
+            $('#error').fadeIn();
+          });
+        }
+      });
     }
   });
 });

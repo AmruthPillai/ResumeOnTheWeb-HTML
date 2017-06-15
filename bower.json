@@ -8,7 +8,9 @@
     "scrollreveal": "^3.3.5",
     "jquery-dateFormat": "^1.0.2",
     "lightbox2": "^2.9.0",
-    "percircle": "^1.0.17"
+    "percircle": "^1.0.17",
+    "jquery-form": "^4.2.1",
+    "jquery-validation": "jquery-validate#^1.16.0"
   },
   "devDependencies": {
     "chai": "^4.0.2",
@@ -18,7 +20,8 @@
     "lightbox2": {
       "main": [
         "dist/css/lightbox.min.css",
-        "dist/js/lightbox.min.js"      ]
+        "dist/js/lightbox.min.js"
+      ]
     },
     "percircle": {
       "main": [

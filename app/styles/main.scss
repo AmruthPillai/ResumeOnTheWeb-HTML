@@ -27,6 +27,15 @@ p { text-align: justify; @include media-breakpoint-down(sm) { text-align-last: c
   padding-top: 40px;
 }
 
+.heading {
+  color: $heading-gray;
+  font-size: .8em;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  border-bottom: 1px solid $gray-lightest;
+}
+
 .section {
   margin-bottom: 20px;
 
@@ -34,15 +43,6 @@ p { text-align: justify; @include media-breakpoint-down(sm) { text-align-last: c
     .heading {
       color: $red;
     }
-  }
-
-  .heading {
-    color: $heading-gray;
-    font-size: .8em;
-    font-weight: 900;
-    text-transform: uppercase;
-    padding-bottom: 5px;
-    border-bottom: 1px solid $gray-lightest;
   }
 
   .content {

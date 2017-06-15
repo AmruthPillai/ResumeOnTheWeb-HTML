@@ -45,6 +45,15 @@
 
     <!-- FontAwesome -->
     <script async src="https://use.fontawesome.com/00134382b6.js"></script>
+
+    <!-- Google Adsense -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-9798918877764667",
+        enable_page_level_ads: true
+      });
+    </script>
   </head>
   <body>
     <!--[if IE]>
@@ -396,7 +405,6 @@
             <div id="ad53n53" class="section">
               <h6 class="heading">Advertisement</h6>
               <div class="content">
-                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9798918877764667" data-ad-slot="1016253118" data-ad-format="auto"></ins>
                 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
               </div>
@@ -554,7 +562,56 @@
       <hr>
 
       <div id="contact" class="container">
+        <div class="row">
+          <div class="col-md">
+            <h6 class="heading">Where do I live?</h6>
+            <a href="http://pillai.xyz/googlemaps" target="_blank"><img src="images/ap-map.png" class="img-fluid" alt="Amruth Pillai - Google Maps" /></a>
+          </div>
+          <div class="col-md">
+            <div class="section">
+              <h6 class="heading">How can you contact me?</h6>
+              <form id="contact-form" name="contact" method="post">
+                <div class="form-group row">
+                  <label for="fullName" class="col-2 col-form-label">Name</label>
+                  <div class="col-10">
+                    <input type="text" class="form-control" id="fullName" aria-describedby="fullNameHelp" placeholder="Rajesh Rengatramanajananam">
+                    <small id="fullNameHelp" class="form-text text-muted">Who in the world are you?</small>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="emailAddress" class="col-2 col-form-label">E-mail</label>
+                  <div class="col-10">
+                    <input type="text" class="form-control" id="emailAddress" aria-describedby="emailAddressHelp" placeholder="trump@beingpresident.gov">
+                    <small id="emailAddressHelp" class="form-text text-muted">How in the world would I be able to contact you back?</small>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="message" class="col-2 col-form-label">Message</label>
+                  <div class="col-10">
+                    <textarea class="form-control" id="message" aria-describedby="messageHelp" placeholder="I love you." rows="3"></textarea>
+                    <small id="messageHelp" class="form-text text-muted">What on earth would you possibly want to say?</small>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="captcha" class="col-2 col-form-label">Captcha</label>
+                  <div class="col-10">
+                    <input type="text" class="form-control" id="captcha" aria-describedby="captchaHelp" placeholder="What is 1 + six?">
+                    <small id="captchaHelp" class="form-text text-muted">How do I make sure you're not a robot?</small>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+              </form>
 
+              <div id="form-success" class="alert alert-success" role="alert">
+                <strong>Awesome!</strong> I got your email, and will get back to you ASAP! :)
+              </div>
+
+              <div id="form-failure" class="alert alert-danger" role="alert">
+                <strong>Oh snap!</strong> Could you try changing a few things and submitting again?
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <footer>
@@ -562,8 +619,36 @@
         <h6><small><strong>Resume on the Web</strong></small></h6>
         <h6><span class="small">Copyright &copy; 2017 All Rights Reserved.</span></h6>
         <br>
-        <button id="scroll-to-top" type="button" class="btn btn-sm btn-outline-secondary">Scroll to top&nbsp;&nbsp;<i class="fa fa-caret-up" aria-hidden="true"></i></button>
+        <button id="scroll-to-top" style="clear: both;" type="button" class="btn btn-sm btn-outline-secondary">Scroll to top&nbsp;&nbsp;<i class="fa fa-caret-up" aria-hidden="true"></i></button>
+
+        <nav>
+          <ul class="nav">
+            <li class="nav-item pp-link"><a class="nav-link" href="#privacy-policy">Privacy Policy</a></li>
+            <li class="nav-item"><a href="https://github.com/AmruthPillai/ResumeOnTheWeb" class="nav-link">GitHub Repo <small><i class="fa fa-external-link" aria-hidden="true"></i></small></a></li>
+          </ul>
+        </nav>
       </footer>
+
+      <div class="modal fade" id="privacy-policy" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Privacy Policy</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>We do not share personal information with third-parties nor do we store information we collect about your visit to this blog for use other than to analyze content performance through the use of cookies, which you can turn off at anytime by modifying your Internet browser's settings.<p>
+
+              <p>We are not responsible for the republishing of the content found on this blog on other Web sites or media without our permission. This privacy policy is subject to change without notice.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </div>
 
@@ -601,6 +686,8 @@
     <script src="/bower_components/jquery-dateFormat/dist/jquery-dateFormat.js"></script>
     <script src="/bower_components/lightbox2/dist/js/lightbox.min.js"></script>
     <script src="/bower_components/percircle/dist/js/percircle.js"></script>
+    <script src="/bower_components/jquery-form/src/jquery.form.js"></script>
+    <script src="/bower_components/jquery-validation/dist/jquery.validate.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
