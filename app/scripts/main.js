@@ -80,13 +80,13 @@ $(function() {
 				var src = item.description.substring(srcStart, srcEnd); // Extract just the URL
 
         var trimmedTitle = item.title.substr(0, 100); //trim the string to the maximum length
-				trimmedTitle = trimmedTitle.substr(0, Math.max(trimmedTitle.length, trimmedTitle.lastIndexOf(" "))); //re-trim if we are in the middle of a word
+				trimmedTitle = trimmedTitle.substr(0, Math.max(trimmedTitle.length, trimmedTitle.lastIndexOf(' '))); //re-trim if we are in the middle of a word
 
         output += '<a href="' + item.link + '"target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">\
             <div class="d-flex w-100 justify-content-between">\
               <img class="blog-image" src="' + src + '" />\
               <span class="blog-title">' + trimmedTitle + '&nbsp;&nbsp;<small><i class="fa fa-external-link" aria-hidden="true"></i></small></span>\
-              <small class="blog-date">' + jQuery.format.date(item.pubDate, "d MMM \''yy") + '</small>\
+              <small class="blog-date">' + jQuery.format.date(item.pubDate, 'd MMM \'\'yy') + '</small>\
             </div>\
           </a>';
         return k < 4;

@@ -26,14 +26,19 @@
 
   .landing-container {
     height: 30em;
+    position: relative;
+    top: 50%;
+    transform: translateY(-55%);
 
     @media (min-width: $xxl-screen)  {
       height: 60em;
     }
 
-    position: relative;
-    top: 50%;
-    transform: translateY(-55%);
+    #ap-photo {
+      position: relative;
+      display: block;
+      margin: 0 auto;
+    }
 
     .title {
       margin-top: 1em;
