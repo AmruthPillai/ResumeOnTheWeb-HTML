@@ -7,14 +7,24 @@ Everyone needs their own little spot on the interwebs, and this is mine.
 ## Introduction
 Building personal websites, resumes and portfolios have always been one of my most favorite projects, since I get to mess around with new technology, use new tricks I've learnt from the internet and basically, just let me showcase my creativity in the most unique way possible, and I hoped to do the same with this **Resume on the Web** project here.
 
+## Live Demo
+To check out a live demo of the site in all of it's glory, head over to:
+### http://www.amruthpillai.com/
+
 ## Features
 There's a lot of features deep down the heart of this project that make it special. It's not just a simple website that I whipped up in 2-3 days. Anybody could do that, but since this is a resume/personal project, I wanted to use it to showcase the best use of all my skills, from design, to development, to server management.
+
+<a href="http://www.w3.org/html/logo/">
+<img src="https://www.w3.org/html/logo/badge/html5-badge-h-css3.png" width="133" height="64" alt="HTML5 Powered with CSS3 / Styling" title="HTML5 Powered with CSS3 / Styling">
+</a>
 
 The number of things I've learnt from this project is truly endless, but I'll try to create one anyway:
 * UI/UX Design from scratch *(Adobe Photoshop CC, Adobe Illustrator CC)*
 * Workflow Management using gulp.js *(http://gulpjs.com/)*
 * Minification of HTML, CSS and JS *(to serve faster websites)*
 * Optimization of Images *(to take up less space)*
+* Server Setup & Management (Apache & Ubuntu 14.04)
+* SSL Certification and Renewal using Certbot
 * Using SVGs instead of Bitmap images, *wherever possible*
 * Using the latest Bootstrap v4.0.0 Alpha 6
 * Using jQuery for the minimal logic within the site
