@@ -170,17 +170,17 @@ $(function() {
         url: "contact.php",
 
         success: function() {
-          $('#contact :input').attr('disabled', 'disabled');
-          $('#contact').fadeTo( "slow", 0.15, function() {
+          $('#contact-form :input').attr('disabled', 'disabled');
+          $('#contact-form').fadeTo( "slow", 0.15, function() {
             $(this).find(':input').attr('disabled', 'disabled');
             $(this).find('label').css('cursor','default');
-            $('#success').fadeIn();
+            $('#form-success').fadeIn();
           });
         },
 
         error: function() {
-          $('#contact').fadeTo( "slow", 0.15, function() {
-            $('#error').fadeIn();
+          $('#contact-form').fadeTo( "slow", 0.15, function() {
+            $('#form-failure').fadeIn();
           });
         }
       });
