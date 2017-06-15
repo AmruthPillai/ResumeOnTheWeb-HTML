@@ -54,7 +54,7 @@ $(document).ready(function() {
 
 $('#scroll-to-content').click(function() {
   $('html, body').animate({
-    scrollTop: $('#scroll-hook').offset().top
+    scrollTop: $('#resume-download-switch').offset().top
   }, 'slow');
 });
 

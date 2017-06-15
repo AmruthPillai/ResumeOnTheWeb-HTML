@@ -24,6 +24,13 @@ p { text-align: justify; @include media-breakpoint-down(sm) { text-align-last: c
 @import 'sections/footer.scss';
 
 // Content Styles
+#resume-download-switch {
+  border-top: 1px solid $gray-lighter;
+  border-bottom: 1px solid $gray-lighter;
+  padding: 25px 0;
+  margin-bottom: 50px;
+}
+
 .section {
   margin-bottom: 20px;
 
