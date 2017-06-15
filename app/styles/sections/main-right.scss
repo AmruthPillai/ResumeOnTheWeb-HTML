@@ -90,30 +90,31 @@
   }
 }
 
-#instagram-gallery {
+#photography {
   #instagram-content {
-    display: inline-flex;
-    flex-basis: 100%;
+    display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
 
     .insta-box {
-      background-color: $black;
-      margin: 5px 0;
+      flex-basis: 25%;
 
       a {
+        height: 128px;
 
         img {
           position: relative;
           z-index: 2;
-          width: 128px;
+          width: 100%;
           height: 128px;
+          object-fit: cover;
 
           &:hover {
             opacity: .5;
           }
         }
-
       }
     }
 
@@ -138,12 +139,46 @@
   }
 
   .tab-pane {
-    padding: 10px;
     border-left: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
     border-right: 1px solid #ddd;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     height: auto;
+
+    > div {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: stretch;
+
+      > .project {
+        height: 128px;
+        flex-basis: 25%;
+
+        &:hover {
+          > img {
+            opacity: .5;
+          }
+        }
+
+        > img {
+          width: 100%;
+          height: 128px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+.modal {
+  .modal-body {
+    text-align: center;
+  }
+
+  @include media-breakpoint-down(sm)  {
+    width: 100vw;
   }
 }

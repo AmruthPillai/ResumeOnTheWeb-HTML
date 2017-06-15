@@ -96,22 +96,7 @@
         </div>
       </div>
 
-      <div id="resume-download-switch" class="container-fluid">
-        <div class="row text-center">
-          <div class="col-sm-3">
-            <a class="btn btn-md btn-outline-danger" href="https://drive.google.com/file/d/0B_jhT3IlN2-2YVlEaXZMN2pFM1U/view" target="_blank">Download Resume PDF&nbsp;&nbsp;<i class="fa fa-cloud-download" aria-hidden="true"></i></a>
-          </div>
-          <p class="hidden-sm-up">&nbsp;</p>
-          <div class="col-sm-2 offset-md-6">
-            <label for="resume-switch" class="small">Do you want the complete<br>resume experience?</label>
-          </div>
-          <div class="col-sm-1">
-            <input id="resume-switch" type="checkbox" checked />
-          </div>
-        </div>
-      </div>
-
-      <div class="container">
+      <div id="resume" class="container">
         <div class="row">
 
           <!-- Left -->
@@ -272,6 +257,62 @@
               </div>
             </div>
 
+            <!-- Achievements -->
+            <div id="achievements" class="section resume-section">
+              <h6 class="heading">Achievements</h6>
+              <div class="content">
+                <div class="container">
+                  <div class="row">
+                    <div class="section-icon col-sm-12 col-lg-1 text-center">
+                      <svg class="icon"><use xlink:href="#achievement" /></svg>
+                    </div>
+                    <div class="col">
+                      <ul class="list-group borderless">
+                        <li class="list-group-item">
+                          <div class="d-flex w-100"><h6>Venturesity Banyan Hack '16</h6></div>
+                          <p><strong>1st Place</strong></p>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="d-flex w-100"><h6>NIT Trichy - Pragyan Hackathon '16</h6></div>
+                          <p><strong>3rd Place</strong></p>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="d-flex w-100"><h6>Smart India Hackathon '17 <small>(National Level)</small></h6></div>
+                          <p><strong>4th Place</strong></p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Certifications -->
+            <div id="certifications" class="section resume-section">
+              <h6 class="heading">Certifications</h6>
+              <div class="content">
+                <div class="container">
+                  <div class="row">
+                    <div class="section-icon col-sm-12 col-lg-1 text-center">
+                      <svg class="icon"><use xlink:href="#certificate" /></svg>
+                    </div>
+                    <div class="col">
+                      <ul class="list-group borderless">
+                        <li class="list-group-item">
+                          <div class="d-flex w-100"><h6>Data Science &amp; Machine Learning using Python</h6></div>
+                          <p><strong>Udemy</strong> | Certificate Number: <a href="https://www.udemy.com/certificate/UC-F86GHHXF/" target="_blank">UC-F86GHHXF&nbsp;&nbsp;<small><i class="fa fa-external-link" aria-hidden="true"></i></small></a></p>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="d-flex w-100"><h6>Dynamic Skills Integrated Program</h6></div>
+                          <p><strong>DSI</strong> - Center for Innovation and Leadership <strong>(CIL)</strong></p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
 
           <!-- Right -->
@@ -353,12 +394,12 @@
             <div id="projects" class="section">
               <h6 class="heading">Projects</h6>
               <div class="content">
-                <ul class="nav nav-tabs" id="project-tabs" role="tablist">
+                <ul class="nav nav-tabs nav-fill" id="project-tabs" role="tablist">
                   <li class="nav-item">
-                    <a class="nav-link active" data-toggle="tab" href="#projects-web" role="tab" aria-controls="projects-web">Web Development</a>
+                    <a class="nav-link active" data-toggle="tab" href="#projects-graphic" role="tab" aria-controls="projects-graphic">Graphic Design</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#projects-android" role="tab" aria-controls="projects-android">Android Development</a>
+                    <a class="nav-link" data-toggle="tab" href="#projects-web" role="tab" aria-controls="projects-web">Web Development</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#projects-uiux" role="tab" aria-controls="projects-uiux">UI/UX Design</a>
@@ -366,99 +407,122 @@
                   <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#projects-print" role="tab" aria-controls="projects-print">Print/Media Design</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#projects-creative" role="tab" aria-controls="projects-creative">Creative Design</a>
-                  </li>
                 </ul>
 
                 <div class="tab-content">
+                  <!-- Graphic Design -->
+                  <div class="tab-pane active" id="projects-graphic" role="tabpanel">
+                    <div>
+                      <a class="project" data-toggle="modal" data-target="#graphic-1">
+                        <img src="images/projects/graphic/ap-typography.png" alt="">
+                      </a>
+                      <a class="project" data-toggle="modal" data-target="#graphic-3">
+                        <img src="images/projects/graphic/bgbaliga.png" alt="">
+                      </a>
+                      <a class="project" data-toggle="modal" data-target="#graphic-4">
+                        <img src="images/projects/graphic/calamity-control.png" alt="">
+                      </a>
+                      <a class="project" data-toggle="modal" data-target="#graphic-5">
+                        <img src="images/projects/graphic/dsit-typography.jpg" alt="">
+                      </a>
+                      <a class="project" data-toggle="modal" data-target="#graphic-9">
+                        <img src="images/projects/graphic/omnisurf.jpg" alt="">
+                      </a>
+                      <a class="project" data-toggle="modal" data-target="#graphic-11">
+                        <img src="images/projects/graphic/trendgfx.png" alt="">
+                      </a>
+                    </div>
+                  </div>
+
                   <!-- Web Design -->
-                  <div class="tab-pane active" id="projects-web" role="tabpanel">
-                    Web Development
+                  <div class="tab-pane" id="projects-web" role="tabpanel">
+                    <div>
+                      <a class="project" data-toggle="modal" data-target="#web-1">
+                        <img src="images/projects/web/simplehue.jpg" alt="">
+                      </a>
+                      <a class="project" data-toggle="modal" data-target="#web-2">
+                        <img src="images/projects/web/envisionators.jpg" alt="">
+                      </a>
+                      <a class="project" data-toggle="modal" data-target="#web-3">
+                        <img src="images/projects/web/air-mantra.jpg" alt="">
+                      </a>
+                      <a class="project" data-toggle="modal" data-target="#web-4">
+                        <img src="images/projects/web/software-buzzer.jpg" alt="">
+                      </a>
+                      <a class="project" data-toggle="modal" data-target="#web-5">
+                        <img src="images/projects/web/giftxoxo.jpg" alt="">
+                      </a>
+                    </div>
                   </div>
-                  <!-- Android Development -->
-                  <div class="tab-pane" id="projects-android" role="tabpanel">
-                    Android Development
-                  </div>
+
                   <!-- UI/UX Design -->
                   <div class="tab-pane" id="projects-uiux" role="tabpanel">
-                    UI/UX Design
+                    <div>
+                      <a class="project" data-toggle="modal" data-target="#uiux-1">
+                        <img src="images/projects/uiux/circle-music-player.jpg" alt="">
+                      </a>
+                      <a class="project" data-toggle="modal" data-target="#uiux-2">
+                        <img src="images/projects/uiux/future-hover-menu.jpg" alt="">
+                      </a>
+                      <a class="project" data-toggle="modal" data-target="#uiux-3">
+                        <img src="images/projects/uiux/material-auth.png" alt="">
+                      </a>
+                      <a class="project" data-toggle="modal" data-target="#uiux-4">
+                        <img src="images/projects/uiux/notable.png" alt="">
+                      </a>
+                      <a class="project" data-toggle="modal" data-target="#uiux-5">
+                        <img src="images/projects/uiux/qrpro.jpg" alt="">
+                      </a>
+                      <a class="project" data-toggle="modal" data-target="#uiux-6">
+                        <img src="images/projects/uiux/vapordrive.jpg" alt="">
+                      </a>
+                      <a class="project" data-toggle="modal" data-target="#uiux-7">
+                        <img src="images/projects/uiux/whatsapp.jpg" alt="">
+                      </a>
+                    </div>
                   </div>
+
                   <!-- Print & Media Design -->
                   <div class="tab-pane" id="projects-print" role="tabpanel">
-                    Print &amp; Media Design
+                    <div>
+                      <a class="project" data-toggle="modal" data-target="#print-1">
+                        <img src="images/projects/print/benignora.png" alt="">
+                      </a>
+                      <a class="project" data-toggle="modal" data-target="#print-2">
+                        <img src="images/projects/print/lcd-business-card.jpg" alt="">
+                      </a>
+                      <a class="project" data-toggle="modal" data-target="#print-3">
+                        <img src="images/projects/print/dsce-cultural-activities.jpg" alt="">
+                      </a>
+                      <a class="project" data-toggle="modal" data-target="#print-4">
+                        <img src="images/projects/print/dsce-paper-presentation.png" alt="">
+                      </a>
+                      <a class="project" data-toggle="modal" data-target="#print-5">
+                        <img src="images/projects/print/dsce-kalaarnava.png" alt="">
+                      </a>
+                      <a class="project" data-toggle="modal" data-target="#print-6">
+                        <img src="images/projects/print/dsce-techmock.jpg" alt="">
+                      </a>
+                      <a class="project" data-toggle="modal" data-target="#print-7">
+                        <img src="images/projects/print/blood-donation.jpg" alt="">
+                      </a>
+                    </div>
                   </div>
-                  <!-- Creative Design -->
-                  <div class="tab-pane" id="projects-creative" role="tabpanel">
-                    Creative Design
-                  </div>
+
                 </div>
               </div>
+              <a style="margin-top: 10px;" class="btn btn-outline-primary btn-sm btn-block" href="http://pillai.xyz/instagram" target="_blank">View more on <i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
+              <a style="margin-top: 10px;" class="btn btn-outline-info btn-sm btn-block" href="http://pillai.xyz/instagram" target="_blank">View more on <i class="fa fa-dribbble" aria-hidden="true"></i> Dribbble</a>
             </div>
 
             <!-- Instagram -->
-            <div id="instagram-gallery" class="section">
-              <h6 class="heading">Instagram</h6>
+            <div id="photography" class="section">
+              <h6 class="heading">Photography</h6>
               <div class="content">
                 <div id="instagram-content">
                   <!-- Data to be filled in by jQuery -->
                 </div>
-              </div>
-            </div>
-
-            <!-- Achievements -->
-            <div id="achievements" class="section resume-section">
-              <h6 class="heading">Achievements</h6>
-              <div class="content">
-                <div class="container">
-                  <div class="row">
-                    <div class="section-icon col-sm-12 col-lg-1 text-center">
-                      <svg class="icon"><use xlink:href="#achievement" /></svg>
-                    </div>
-                    <div class="col">
-                      <ul class="list-group borderless">
-                        <li class="list-group-item">
-                          <div class="d-flex w-100"><h6>Venturesity Banyan Hack '16</h6></div>
-                          <p><strong>1st Place</strong></p>
-                        </li>
-                        <li class="list-group-item">
-                          <div class="d-flex w-100"><h6>NIT Trichy - Pragyan Hackathon '16</h6></div>
-                          <p><strong>3rd Place</strong></p>
-                        </li>
-                        <li class="list-group-item">
-                          <div class="d-flex w-100"><h6>Smart India Hackathon '17 <small>(National Level)</small></h6></div>
-                          <p><strong>4th Place</strong></p>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Certifications -->
-            <div id="certifications" class="section resume-section">
-              <h6 class="heading">Certifications</h6>
-              <div class="content">
-                <div class="container">
-                  <div class="row">
-                    <div class="section-icon col-sm-12 col-lg-1 text-center">
-                      <svg class="icon"><use xlink:href="#certificate" /></svg>
-                    </div>
-                    <div class="col">
-                      <ul class="list-group borderless">
-                        <li class="list-group-item">
-                          <div class="d-flex w-100"><h6>Data Science &amp; Machine Learning using Python</h6></div>
-                          <p><strong>Udemy</strong> | Certificate Number: <a href="https://www.udemy.com/certificate/UC-F86GHHXF/" target="_blank">UC-F86GHHXF&nbsp;&nbsp;<small><i class="fa fa-external-link" aria-hidden="true"></i></small></a></p>
-                        </li>
-                        <li class="list-group-item">
-                          <div class="d-flex w-100"><h6>Dynamic Skills Integrated Program</h6></div>
-                          <p><strong>DSI</strong> - Center for Innovation and Leadership <strong>(CIL)</strong></p>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+                <a style="margin-top: 10px;" class="btn btn-outline-danger btn-sm btn-block" href="http://pillai.xyz/instagram" target="_blank">View more on <i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a>
               </div>
             </div>
 

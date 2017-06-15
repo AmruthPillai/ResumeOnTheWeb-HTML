@@ -38,7 +38,7 @@ $(document).ready(function() {
 
   $('#project-tabs a').click(function (e) {
     e.preventDefault()
-    $(this).tab('show')
+    $(this).tab('show');
   });
 
   $(photos).preload();
@@ -54,7 +54,7 @@ $(document).ready(function() {
 
 $('#scroll-to-content').click(function() {
   $('html, body').animate({
-    scrollTop: $('#resume-download-switch').offset().top
+    scrollTop: $('#resume').offset().top
   }, 'slow');
 });
 
@@ -63,12 +63,6 @@ $('#scroll-to-top').click(function() {
     scrollTop: 0
   }, 'slow');
 });
-
-var resumeSwitch = document.querySelector('#resume-switch');
-var resumeSwitchInit = new Switchery(resumeSwitch, { color: '#d9534f' });
-resumeSwitch.onchange = function() {
-  $('.resume-section').fadeToggle('slow');
-}
 
 // Medium RSS to JSON
 $(function() {
