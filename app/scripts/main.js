@@ -127,6 +127,12 @@ jQuery.validator.addMethod('answercheck', function (value, element) {
 }, "type the correct answer -_-");
 
 $(function() {
+  var data = {
+    name: $("#name").val(),
+    email: $("#email").val(),
+    message: $("#message").val()
+  };
+
   $('#contact-form').validate({
     rules: {
       name: {
