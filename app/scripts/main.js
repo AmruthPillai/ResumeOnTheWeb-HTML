@@ -34,6 +34,7 @@ $(document).ready(function() {
     percent: 50
   });
 
+  $('[data-toggle="popover"]').popover();
   window.ScrollReveal().reveal('.section', { origin: 'top' });
   $(photos).preload();
   var myLazyLoad = new LazyLoad();
