@@ -35,8 +35,8 @@ $(document).ready(function() {
   });
 
   window.ScrollReveal().reveal('.section', { origin: 'top' });
-
   $(photos).preload();
+  var myLazyLoad = new LazyLoad();
 
   $('.hexagon').css({'background-image':'url(\'http://cdn.amruthpillai.com/images/photos/'+photos[0]+'.jpg\')'});
   var i = 1;
@@ -123,63 +123,39 @@ $(function() {
 
 // Contact Form
 $(function() {
-  $('#contact-form').validate({
-    rules: {
-      name: "required",
-      email: {
-        required: true,
-        email: true
-      },
-      message: {
-        required: true,
-        minlength: 2
-      }
-    },
+  $('#contact-form').submit(function(e) {
+    e.preventDefault();
 
-    messages: {
-      name: "Please enter your name!",
-      email: "Please enter a valid email address!",
-      message: {
-        required: "You gotta have something to say!",
-        minlength: "Your message must be at least 2 characters long, at least a 'hi'?"
-      }
-    },
+    console.log('Form Submitted');
 
-    submitHandler: function(form) {
-      // $('#contact-form').submit(function() {
-        console.log('Form Submitted!');
-        var form_data = {
-          name: $('#name').val(),
-          email: $('#email').val(),
-          message: $('#message').val()
-        };
+    var form_data = {
+      name: $('#name').val(),
+      email: $('#email').val(),
+      message: $('#message').val()
+    };
 
-        $.ajax({
-          type: 'POST',
-          data: form_data,
-          url: 'http://pillai.xyz/testing/dist/contact.php',
+    $.ajax({
+      type: 'POST',
+      data: form_data,
+      url: 'http://pillai.xyz/testing/dist/contact.php',
 
-          success: function() {
-            $('#form-failure').fadeOut();
-            $('#contact-form').fadeTo( 'slow', 0.15, function() {
-              $(this).find(':input').attr('disabled', 'disabled');
-              $(this).find('label').css('cursor','default');
+      success: function() {
+        $('#form-failure').fadeOut();
+        $('#contact-form').fadeTo( 'slow', 0.15, function() {
+          $(this).find(':input').attr('disabled', 'disabled');
+          $(this).find('label').css('cursor','default');
 
-              $(this).find(':input').fadeOut();
-              $(this).find('label').fadeOut();
-              $(this).find('small').fadeOut();
+          $(this).find(':input').fadeOut();
+          $(this).find('label').fadeOut();
+          $(this).find('small').fadeOut();
 
-              $('#form-success').fadeIn();
-            });
-          },
-
-          error: function() {
-            $('#form-failure').fadeIn();
-          }
+          $('#form-success').fadeIn();
         });
-      // });
+      },
 
-      form.submit();
-    }
+      error: function() {
+        $('#form-failure').fadeIn();
+      }
+    });
   });
 });
