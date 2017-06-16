@@ -137,14 +137,11 @@ $(function() {
     $.ajax({
       type: 'POST',
       data: form_data,
-      url: 'http://pillai.xyz/testing/dist/contact.php',
+      url: 'http://amruthpillai.com/contact.php',
 
       success: function() {
         $('#form-failure').fadeOut();
         $('#contact-form').fadeTo( 'slow', 0.15, function() {
-          $(this).find(':input').attr('disabled', 'disabled');
-          $(this).find('label').css('cursor','default');
-
           $(this).find(':input').fadeOut();
           $(this).find('label').fadeOut();
           $(this).find('small').fadeOut();

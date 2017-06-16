@@ -564,39 +564,48 @@
       <div id="contact" class="container">
         <div class="row">
           <div class="col-md mb-4">
-            <h6 class="heading">Where do I live?</h6>
-            <a href="http://pillai.xyz/googlemaps" target="_blank"><img src="images/ap-map.png" class="img-fluid" alt="Amruth Pillai - Google Maps" /></a>
+            <div class="section mb-4">
+              <h6 class="heading">Where do I live?</h6>
+              <a href="http://pillai.xyz/googlemaps" target="_blank"><img src="images/ap-map.png" class="img-fluid" alt="Amruth Pillai - Google Maps" /></a>
+            </div>
+
+            <div class="section">
+              <h6 class="heading">Find me on the interwebs!</h6>
+              <p>
+                <small>When I'm not building cool stuff like this, I'm usually whiling away my time on <a href="http://pillai.xyz/facebook" target="_blank">Facebook</a> and it's other assorted band of time crunchers.</small>
+                <div class="social-icons text-center">
+                  <a href="http://pillai.xyz/facebook" target="_blank"><svg class="icon"><use xlink:href="#facebook" /></svg></a>
+                  <a href="http://pillai.xyz/instagram" target="_blank"><svg class="icon"><use xlink:href="#instagram" /></svg></a>
+                  <a href="http://pillai.xyz/twitter" target="_blank"><svg class="icon"><use xlink:href="#twitter" /></svg></a>
+                  <a href="http://pillai.xyz/googleplus" target="_blank"><svg class="icon"><use xlink:href="#google-plus" /></svg></a>
+                  <a href="http://pillai.xyz/linkedin" target="_blank"><svg class="icon"><use xlink:href="#linkedin" /></svg></a>
+                </div>
+              </p>
+            </div>
           </div>
           <div class="col-md">
             <div class="section">
-              <h6 class="heading">How can you contact me?</h6>
+              <h6 class="heading">Want to say something?</h6>
               <form id="contact-form" name="contact" method="post">
                 <div class="form-group row">
-                  <label for="name" class="col-md-2 col-form-label">Name</label>
+                  <label for="name" class="col-md-2 col-form-label col-form-label-sm">Name</label>
                   <div class="col-md-10">
                     <input type="text" class="form-control" id="name" name="name" aria-describedby="nameHelp" placeholder="Rajesh Rengatramanajananam">
                     <small id="nameHelp" class="form-text text-muted">Who in the world are you?</small>
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="email" class="col-md-2 col-form-label">E-mail</label>
+                  <label for="email" class="col-md-2 col-form-label col-form-label-sm">E-mail</label>
                   <div class="col-md-10">
                     <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="trump@beingpresident.gov">
                     <small id="emailHelp" class="form-text text-muted">How in the world would I be able to contact you back?</small>
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="message" class="col-md-2 col-form-label">Message</label>
+                  <label for="message" class="col-md-2 col-form-label col-form-label-sm">Message</label>
                   <div class="col-md-10">
-                    <textarea class="form-control" id="message" name="message" aria-describedby="messageHelp" placeholder="I love you." rows="3"></textarea>
+                    <textarea class="form-control" id="message" name="message" aria-describedby="messageHelp" placeholder="You rock!" rows="3"></textarea>
                     <small id="messageHelp" class="form-text text-muted">What on earth would you possibly want to say?</small>
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="captcha" class="col-md-2 col-form-label">Captcha</label>
-                  <div class="col-md-10">
-                    <input type="text" class="form-control" id="captcha" name="captcha" aria-describedby="captchaHelp" placeholder="What is 1 + six?">
-                    <small id="captchaHelp" class="form-text text-muted">How do I make sure you're not a robot?</small>
                   </div>
                 </div>
                 <button id="form-submit" type="submit" class="btn btn-primary btn-block">Submit</button>
@@ -621,7 +630,7 @@
         <br>
         <button id="scroll-to-top" style="clear: both;" type="button" class="btn btn-sm btn-outline-secondary">Scroll to top&nbsp;&nbsp;<i class="fa fa-caret-up" aria-hidden="true"></i></button>
 
-        <nav>
+        <nav class="hidden-sm-down">
           <ul class="nav">
             <li class="nav-item pp-link"><a class="nav-link" href="#privacy-policy">Privacy Policy</a></li>
             <li class="nav-item"><a href="https://github.com/AmruthPillai/ResumeOnTheWeb" class="nav-link">GitHub Repo <small><i class="fa fa-external-link" aria-hidden="true"></i></small></a></li>
