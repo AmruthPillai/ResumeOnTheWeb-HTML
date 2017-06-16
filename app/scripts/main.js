@@ -147,4 +147,5 @@ $('#contact-form#form-submit').click(function() {
         $('#form-failure').fadeIn();
       });
     }
+  });
 });
