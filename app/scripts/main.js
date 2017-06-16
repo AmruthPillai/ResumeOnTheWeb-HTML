@@ -123,37 +123,58 @@ $(function() {
 
 // Contact Form
 $(function() {
-  $('#form-submit').click(function(e) {
-    e.preventDefault();
-
-    var form_data = {
-      name: $('#name').val(),
-      email: $('#email').val(),
-      message: $('#message').val()
-    };
-
-    $.ajax({
-      type: 'POST',
-      data: form_data,
-      url: 'http://pillai.xyz/testing/dist/contact.php',
-
-      success: function() {
-        $('#form-failure').fadeOut();
-        $('#contact-form').fadeTo( 'slow', 0.15, function() {
-          $(this).find(':input').attr('disabled', 'disabled');
-          $(this).find('label').css('cursor','default');
-
-          $(this).find(':input').fadeOut();
-          $(this).find('label').fadeOut();
-          $(this).find('small').fadeOut();
-
-          $('#form-success').fadeIn();
-        });
+  $("form[name='registration']").validate({
+    rules: {
+      name: "required",
+      email: {
+        required: true,
+        email: true
       },
-
-      error: function() {
-        $('#form-failure').fadeIn();
+      message: {
+        required: true,
+        minlength: 2
       }
-    });
+    },
+    messages: {
+      name: "Please enter your name!",
+      email: "Please enter a valid email address!",
+      message: {
+        required: "You gotta have something to say!",
+        minlength: "Your message must be at least 2 characters long, at least a 'hi'?"
+      }
+    },
+    submitHandler: function(form) {
+      var form_data = {
+        name: $('#name').val(),
+        email: $('#email').val(),
+        message: $('#message').val()
+      };
+
+      $.ajax({
+        type: 'POST',
+        data: form_data,
+        url: 'http://pillai.xyz/testing/dist/contact.php',
+
+        success: function() {
+          $('#form-failure').fadeOut();
+          $('#contact-form').fadeTo( 'slow', 0.15, function() {
+            $(this).find(':input').attr('disabled', 'disabled');
+            $(this).find('label').css('cursor','default');
+
+            $(this).find(':input').fadeOut();
+            $(this).find('label').fadeOut();
+            $(this).find('small').fadeOut();
+
+            $('#form-success').fadeIn();
+          });
+        },
+
+        error: function() {
+          $('#form-failure').fadeIn();
+        }
+      });
+
+      form.submit();
+    }
   });
 });
