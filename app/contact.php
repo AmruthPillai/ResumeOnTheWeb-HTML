@@ -2,7 +2,7 @@
   header('Access-Control-Allow-Origin: *');
   if ( (isset($_POST['name'])) && (isset($_POST['email']) && $_POST['message']!='') ) {
     $to = 'im.amruth@gmail.com';
-    $subject = 'Someone has sent you a message on amruthpillai.com!';
+    $subject = 'Message from Amruth Pillai\'s Resume on the Web';
     $message = '
       <html>
         <head>
@@ -15,10 +15,14 @@
         </body>
       </html>
     ';
-    $headers  = 'Content-type: text/html; charset=utf-8 \r\n';
-    $headers .= 'From: '.$_POST['name'].'<'.$_POST['email'].'>\r\n';
 
-    mail($to, $subject, $message, $headers);
+    $headers[] = 'MIME-Version: 1.0';
+    $headers[] = 'Content-type: text/html; charset=iso-8859-1';
+
+    $headers[] = 'To: Amruth Pillai <im.amruth@gmail.com>';
+    $headers[] = 'From: '.$_POST['name'].' <'.$_POST['email'].'>';
+
+    mail($to, $subject, $message, implode("\r\n", $headers));
 
     echo json_encode(array('status' => 'success'));
   } else {
