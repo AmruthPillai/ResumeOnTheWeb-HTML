@@ -122,64 +122,29 @@ $(function() {
 });
 
 // Contact Form
-$(function() {
-  var data = {
+$('#contact-form#form-submit').click(function() {
+  var form_data = {
     name: $("#name").val(),
     email: $("#email").val(),
     message: $("#message").val()
   };
 
-  $('#contact-form').validate({
-    rules: {
-      name: {
-        required: true,
-        minlength: 2
-      },
-      email: {
-        required: true,
-        email: true
-      },
-      message: {
-        required: true
-      }
+  $.ajax({
+    type: "POST",
+    data: form_data,
+    url: "contact.php",
+
+    success: function() {
+      $('#contact-form').fadeTo( "slow", 0.15, function() {
+        $(this).find(':input').attr('disabled', 'disabled');
+        $(this).find('label').css('cursor','default');
+        $('#form-success').fadeIn();
+      });
     },
 
-    messages: {
-      name: {
-        required: "come on, you have a name don't you?",
-        minlength: "your name must consist of at least 2 characters"
-      },
-      email: {
-        required: "no email, no message"
-      },
-      message: {
-        required: "um...yea, you have to write something to send this form.",
-        minlength: "thats all? really?"
-      }
-    },
-
-    submitHandler: function(form) {
-      $("#contact-form").ajaxSubmit({
-        type: "POST",
-        data: data,
-        url: "../contact.php",
-
-        success: function() {
-          console.log('Success!');
-
-          $('#contact-form').fadeTo( "slow", 0.15, function() {
-            $(this).find(':input').attr('disabled', 'disabled');
-            $(this).find('label').css('cursor','default');
-
-            $('#form-success').fadeIn();
-          });
-        },
-
-        error: function() {
-          console.log('Error!');
-          $('#form-failure').fadeIn();
-        }
+    error: function() {
+      $('#contact-form').fadeTo( "slow", 0.15, function() {
+        $('#form-failure').fadeIn();
       });
     }
-  });
 });
