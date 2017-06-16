@@ -138,17 +138,20 @@ $(function() {
       url: 'http://pillai.xyz/testing/dist/contact.php',
 
       success: function() {
+        $('#form-failure').fadeOut();
         $('#contact-form').fadeTo( 'slow', 0.15, function() {
           $(this).find(':input').attr('disabled', 'disabled');
           $(this).find('label').css('cursor','default');
+
+          $(this).find(':input').fadeOut();
+          $(this).find('label').fadeOut();
+
           $('#form-success').fadeIn();
         });
       },
 
       error: function() {
-        $('#contact-form').fadeTo( 'slow', 0.15, function() {
-          $('#form-failure').fadeIn();
-        });
+        $('#form-failure').fadeIn();
       }
     });
   });

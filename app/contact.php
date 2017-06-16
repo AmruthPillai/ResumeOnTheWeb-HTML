@@ -19,8 +19,6 @@
     $headers[] = 'MIME-Version: 1.0';
     $headers[] = 'Content-type: text/html; charset=iso-8859-1';
     $headers[] = 'X-Mailer: PHP/' . phpversion();
-
-    $headers[] = 'To: Amruth Pillai <im.amruth@gmail.com>';
     $headers[] = 'From: Amruth Pillai\'s Resume on the Web <resume@amruthpillai.com>';
     $headers[] = 'Reply-To: '.$_POST['name'].' <'.$_POST['email'].'>';
 
