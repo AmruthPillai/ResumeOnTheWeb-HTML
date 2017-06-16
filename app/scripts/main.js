@@ -145,6 +145,7 @@ $(function() {
 
           $(this).find(':input').fadeOut();
           $(this).find('label').fadeOut();
+          $(this).find('small').fadeOut();
 
           $('#form-success').fadeIn();
         });
