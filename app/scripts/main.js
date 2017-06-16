@@ -122,7 +122,9 @@ $(function() {
 });
 
 // Contact Form
-$('#contact-form#form-submit').click(function() {
+$('#contact-form#form-submit').click(function(e) {
+  e.preventDefault();
+
   var form_data = {
     name: $('#name').val(),
     email: $('#email').val(),
@@ -132,7 +134,7 @@ $('#contact-form#form-submit').click(function() {
   $.ajax({
     type: 'POST',
     data: form_data,
-    url: 'contact.php',
+    url: '../contact.php',
 
     success: function() {
       $('#contact-form').fadeTo( 'slow', 0.15, function() {
