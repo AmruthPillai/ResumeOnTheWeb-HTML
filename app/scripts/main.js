@@ -173,7 +173,7 @@ $(function() {
       $(form).ajaxSubmit({
         type: "POST",
         data: $(form).serialize(),
-        url: "contact.php",
+        url: "../contact.php",
 
         success: function() {
           $('#contact-form :input').attr('disabled', 'disabled');
