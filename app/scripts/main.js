@@ -37,7 +37,7 @@ $(document).ready(function() {
   $('[data-toggle="popover"]').popover();
   window.ScrollReveal().reveal('.section', { origin: 'top' });
   $(photos).preload();
-  var myLazyLoad = new LazyLoad();
+  // var myLazyLoad = new LazyLoad();
 
   $('.hexagon').css({'background-image':'url(\'http://cdn.amruthpillai.com/images/photos/'+photos[0]+'.jpg\')'});
   var i = 1;
