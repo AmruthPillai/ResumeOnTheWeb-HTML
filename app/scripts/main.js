@@ -124,18 +124,18 @@ $(function() {
 // Contact Form
 $('#contact-form#form-submit').click(function() {
   var form_data = {
-    name: $("#name").val(),
-    email: $("#email").val(),
-    message: $("#message").val()
+    name: $('#name').val(),
+    email: $('#email').val(),
+    message: $('#message').val()
   };
 
   $.ajax({
-    type: "POST",
+    type: 'POST',
     data: form_data,
-    url: "contact.php",
+    url: 'contact.php',
 
     success: function() {
-      $('#contact-form').fadeTo( "slow", 0.15, function() {
+      $('#contact-form').fadeTo( 'slow', 0.15, function() {
         $(this).find(':input').attr('disabled', 'disabled');
         $(this).find('label').css('cursor','default');
         $('#form-success').fadeIn();
@@ -143,7 +143,7 @@ $('#contact-form#form-submit').click(function() {
     },
 
     error: function() {
-      $('#contact-form').fadeTo( "slow", 0.15, function() {
+      $('#contact-form').fadeTo( 'slow', 0.15, function() {
         $('#form-failure').fadeIn();
       });
     }
