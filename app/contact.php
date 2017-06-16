@@ -1,4 +1,5 @@
 <?php
+  header("Access-Control-Allow-Origin: *");
   if ( (isset($_POST['name'])) && (isset($_POST['email']) && $_POST['message']!="") ) {
     $to = 'im.amruth@gmail.com';
     $subject = 'Someone has sent you a message on amruthpillai.com!';
