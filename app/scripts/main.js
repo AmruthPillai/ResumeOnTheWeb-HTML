@@ -122,32 +122,34 @@ $(function() {
 });
 
 // Contact Form
-$('#contact-form#form-submit').click(function(e) {
-  e.preventDefault();
+$(function() {
+  $('#form-submit').click(function(e) {
+    e.preventDefault();
 
-  var form_data = {
-    name: $('#name').val(),
-    email: $('#email').val(),
-    message: $('#message').val()
-  };
+    var form_data = {
+      name: $('#name').val(),
+      email: $('#email').val(),
+      message: $('#message').val()
+    };
 
-  $.ajax({
-    type: 'POST',
-    data: form_data,
-    url: '../contact.php',
+    $.ajax({
+      type: 'POST',
+      data: form_data,
+      url: '../contact.php',
 
-    success: function() {
-      $('#contact-form').fadeTo( 'slow', 0.15, function() {
-        $(this).find(':input').attr('disabled', 'disabled');
-        $(this).find('label').css('cursor','default');
-        $('#form-success').fadeIn();
-      });
-    },
+      success: function() {
+        $('#contact-form').fadeTo( 'slow', 0.15, function() {
+          $(this).find(':input').attr('disabled', 'disabled');
+          $(this).find('label').css('cursor','default');
+          $('#form-success').fadeIn();
+        });
+      },
 
-    error: function() {
-      $('#contact-form').fadeTo( 'slow', 0.15, function() {
-        $('#form-failure').fadeIn();
-      });
-    }
+      error: function() {
+        $('#contact-form').fadeTo( 'slow', 0.15, function() {
+          $('#form-failure').fadeIn();
+        });
+      }
+    });
   });
 });
