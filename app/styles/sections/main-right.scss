@@ -45,6 +45,15 @@
 
 #education {
   .list-group-item {
+    .icon {
+      padding: 10px 0;
+
+      img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
     .school {
       text-align: left;
       font-size: 1.2em;
@@ -126,6 +135,14 @@
 
 #work-experience {
   li {
+    .icon {
+      padding: 10px 0;
+
+      img {
+        height: 30px;
+      }
+    }
+
     .workplace { font-size: 1.2em; font-weight: 500;}
     .period { font-size: .9em; }
     .position { font-size: .9em; margin-top: -3px; font-weight: 600; }
