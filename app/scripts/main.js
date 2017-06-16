@@ -135,7 +135,7 @@ $(function() {
     $.ajax({
       type: 'POST',
       data: form_data,
-      url: '../contact.php',
+      url: 'http://pillai.xyz/testing/dist/contact.php',
 
       success: function() {
         $('#contact-form').fadeTo( 'slow', 0.15, function() {
