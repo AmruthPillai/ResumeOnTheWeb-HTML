@@ -122,10 +122,6 @@ $(function() {
 });
 
 // Contact Form
-jQuery.validator.addMethod('answercheck', function (value, element) {
-  return this.optional(element) || /^\bseven\b$/.test(value);
-}, "type the correct answer -_-");
-
 $(function() {
   var data = {
     name: $("#name").val(),
@@ -145,10 +141,6 @@ $(function() {
       },
       message: {
         required: true
-      },
-      answer: {
-        required: true,
-        answercheck: true
       }
     },
 
@@ -163,31 +155,29 @@ $(function() {
       message: {
         required: "um...yea, you have to write something to send this form.",
         minlength: "thats all? really?"
-      },
-      answer: {
-        required: "sorry, wrong answer!"
       }
     },
 
     submitHandler: function(form) {
-      $(form).ajaxSubmit({
+      $("#contact-form").ajaxSubmit({
         type: "POST",
-        data: $(form).serialize(),
+        data: data,
         url: "../contact.php",
 
         success: function() {
-          $('#contact-form :input').attr('disabled', 'disabled');
+          console.log('Success!');
+
           $('#contact-form').fadeTo( "slow", 0.15, function() {
             $(this).find(':input').attr('disabled', 'disabled');
             $(this).find('label').css('cursor','default');
+
             $('#form-success').fadeIn();
           });
         },
 
         error: function() {
-          $('#contact-form').fadeTo( "slow", 0.15, function() {
-            $('#form-failure').fadeIn();
-          });
+          console.log('Error!');
+          $('#form-failure').fadeIn();
         }
       });
     }
