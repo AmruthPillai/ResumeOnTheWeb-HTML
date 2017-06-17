@@ -37,7 +37,6 @@ $(document).ready(function() {
   $('[data-toggle="popover"]').popover();
   window.ScrollReveal().reveal('.section', { origin: 'top' });
   $(photos).preload();
-  // var myLazyLoad = new LazyLoad();
 
   $('.hexagon').css({'background-image':'url(\'http://cdn.amruthpillai.com/images/photos/'+photos[0]+'.jpg\')'});
   var i = 1;
@@ -95,7 +94,7 @@ $(function() {
               <small class="blog-date">' + jQuery.format.date(item.pubDate, 'd MMM \'\'yy') + '</small>\
             </div>\
           </a>';
-        return k < 4;
+        return k < 3;
       });
       output += '</ul>';
       $blog_content.html(output);
@@ -103,6 +102,7 @@ $(function() {
   });
 });
 
+// Instagram Content
 $(function() {
   var $instagram_content = $('#instagram-content');
 

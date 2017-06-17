@@ -1,48 +1,3 @@
-#blog {
-  .list-group-item {
-    .blog-image {
-      width: 128px;
-      height: 64px;
-      object-fit: cover;
-      filter: grayscale(50%);
-    }
-
-    .blog-title {
-      text-align: left;
-      font-size: 1.1em;
-      line-height: 1.4em;
-      position: absolute;
-      left: 11.5em;
-      width: 50%;
-    }
-
-    .blog-date {
-      opacity: .25;
-    }
-
-    @include media-breakpoint-down(lg) {
-      .blog-image {
-        width: 64px;
-      }
-
-      .blog-title {
-        font-size: .9em;
-        line-height: 1.4em;
-        left: 8em;
-        width: 60%
-      }
-
-      .blog-date { display: none; }
-    }
-
-    &:hover {
-      .blog-image { height: 128px; filter: grayscale(0%); }
-      .blog-title { color: $red; }
-      .blog-date { opacity: 1; }
-    }
-  }
-}
-
 #education {
   .list-group-item {
     .icon {
@@ -99,7 +54,7 @@
   }
 }
 
-#photography {
+#instagram-feed {
   #instagram-content {
     display: flex;
     flex-wrap: wrap;
@@ -144,13 +99,51 @@
     }
 
     .workplace { font-size: 1.2em; font-weight: 500;}
-    .period { font-size: .9em; }
+    .period {
+      font-size: .9em;
+      opacity: .25;
+    }
     .position { font-size: .9em; margin-top: -3px; font-weight: 600; }
-    .specialization { font-size: .9em; }
+    .specialization { font-size: .9em; margin-top: 5px;}
+
+    &:hover {
+      .period {
+        opacity: 1;
+      }
+    }
   }
 }
 
-#projects {
+#photography-showcase {
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+
+    iframe, object, embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+#development-projects {
+  li {
+    .name {
+      font-size: 1.2em;
+      font-weight: 500;
+    }
+
+    .description {
+      padding: 10px 0;
+    }
+  }
+}
+
+#design-projects {
   .nav-link {
     text-align: center;
   }
