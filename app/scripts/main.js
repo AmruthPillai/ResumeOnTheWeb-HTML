@@ -34,9 +34,10 @@ $(document).ready(function() {
     percent: 50
   });
 
+  $('[data-toggle="popover"]').popover();
   window.ScrollReveal().reveal('.section', { origin: 'top' });
-
   $(photos).preload();
+  // var myLazyLoad = new LazyLoad();
 
   $('.hexagon').css({'background-image':'url(\'http://cdn.amruthpillai.com/images/photos/'+photos[0]+'.jpg\')'});
   var i = 1;
@@ -122,74 +123,37 @@ $(function() {
 });
 
 // Contact Form
-jQuery.validator.addMethod('answercheck', function (value, element) {
-  return this.optional(element) || /^\bseven\b$/.test(value);
-}, "type the correct answer -_-");
-
 $(function() {
-  var data = {
-    name: $("#name").val(),
-    email: $("#email").val(),
-    message: $("#message").val()
-  };
+  $('#contact-form').submit(function(e) {
+    e.preventDefault();
 
-  $('#contact-form').validate({
-    rules: {
-      name: {
-        required: true,
-        minlength: 2
+    console.log('Form Submitted');
+
+    var form_data = {
+      name: $('#name').val(),
+      email: $('#email').val(),
+      message: $('#message').val()
+    };
+
+    $.ajax({
+      type: 'POST',
+      data: form_data,
+      url: 'http://amruthpillai.com/contact.php',
+
+      success: function() {
+        $('#form-failure').fadeOut();
+        $('#contact-form').fadeTo( 'slow', 0.15, function() {
+          $(this).find(':input').fadeOut();
+          $(this).find('label').fadeOut();
+          $(this).find('small').fadeOut();
+
+          $('#form-success').fadeIn();
+        });
       },
-      email: {
-        required: true,
-        email: true
-      },
-      message: {
-        required: true
-      },
-      answer: {
-        required: true,
-        answercheck: true
+
+      error: function() {
+        $('#form-failure').fadeIn();
       }
-    },
-
-    messages: {
-      name: {
-        required: "come on, you have a name don't you?",
-        minlength: "your name must consist of at least 2 characters"
-      },
-      email: {
-        required: "no email, no message"
-      },
-      message: {
-        required: "um...yea, you have to write something to send this form.",
-        minlength: "thats all? really?"
-      },
-      answer: {
-        required: "sorry, wrong answer!"
-      }
-    },
-
-    submitHandler: function(form) {
-      $(form).ajaxSubmit({
-        type: "POST",
-        data: $(form).serialize(),
-        url: "contact.php",
-
-        success: function() {
-          $('#contact-form :input').attr('disabled', 'disabled');
-          $('#contact-form').fadeTo( "slow", 0.15, function() {
-            $(this).find(':input').attr('disabled', 'disabled');
-            $(this).find('label').css('cursor','default');
-            $('#form-success').fadeIn();
-          });
-        },
-
-        error: function() {
-          $('#contact-form').fadeTo( "slow", 0.15, function() {
-            $('#form-failure').fadeIn();
-          });
-        }
-      });
-    }
+    });
   });
 });
