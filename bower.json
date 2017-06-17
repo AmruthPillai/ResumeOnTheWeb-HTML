@@ -10,8 +10,7 @@
     "lightbox2": "^2.9.0",
     "percircle": "^1.0.17",
     "jquery-form": "^4.2.1",
-    "jquery-validation": "jquery-validate#^1.16.0",
-    "vanilla-lazyload": "^7.2.2"
+    "jquery-validation": "jquery-validate#^1.16.0"
   },
   "devDependencies": {
     "chai": "^4.0.2",
