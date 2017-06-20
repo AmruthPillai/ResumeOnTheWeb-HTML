@@ -37,7 +37,7 @@ p { text-align: justify; @include media-breakpoint-down(sm) { text-align-last: c
 }
 
 .section {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 
   &:hover {
     .heading {
@@ -51,8 +51,10 @@ p { text-align: justify; @include media-breakpoint-down(sm) { text-align-last: c
     line-height: 1.8em;
 
     .list-group-item {
+      padding: 20px;
+      
       &:hover {
-        padding: 30px 20px;
+        padding: 40px 20px;
       }
 
       h6 {
