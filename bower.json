@@ -2,7 +2,7 @@
   "name": "resumeontheweb",
   "private": true,
   "dependencies": {
-    "bootstrap": "~4.0.0-alpha.6",
+    "bootstrap": "~4.0.0-beta",
     "modernizr": "~2.8.1",
     "switchery": "^0.8.2",
     "scrollreveal": "^3.3.5",
