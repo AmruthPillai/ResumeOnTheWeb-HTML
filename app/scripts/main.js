@@ -1,7 +1,7 @@
 // Preload Images
 $.fn.preload = function() {
     this.each(function(){
-        $('<img />')[0].src = 'http://cdn.amruthpillai.com/images/photos/' + this + '.jpg';
+        $('<img />')[0].src = 'http://amruthpillai.com/images/photos/' + this + '.jpg';
     });
 }
 
@@ -38,10 +38,10 @@ $(document).ready(function() {
   window.ScrollReveal().reveal('.section', { origin: 'top' });
   $(photos).preload();
 
-  $('.hexagon').css({'background-image':'url(\'http://cdn.amruthpillai.com/images/photos/'+photos[0]+'.jpg\')'});
+  $('.hexagon').css({'background-image':'url(\'http://amruthpillai.com/images/photos/'+photos[0]+'.jpg\')'});
   var i = 1;
   setInterval(function() {
-    $('.hexagon').css({'background-image':'url(\'http://cdn.amruthpillai.com/images/photos/'+photos[i]+'.jpg\')'});
+    $('.hexagon').css({'background-image':'url(\'http://amruthpillai.com/images/photos/'+photos[i]+'.jpg\')'});
     i++;
     if (i >= photos.length) i = 0;
   }, 5000);
@@ -107,16 +107,17 @@ $(function() {
   var $instagram_content = $('#instagram-content');
 
   $.ajax({
-    url: 'https://igapi.ga/amruthpillai/media/',
+    url: 'https://igpi.ga/amruthpillai/media?count=8',
     type: 'GET',
     crossDomain: true,
     dataType: 'jsonp',
     success: function(response) {
       var output = '';
-      $.each(response.items, function(k, item) {
-        output += '<div class="insta-box"><a href="' + item.link + '" target="_blank"><img src="' + item.images.thumbnail.url + '" /></a></div>';
-        return k < 7;
+
+      $.each(response.images, function(k, item) {
+        output += '<div class="insta-box"><a href="https://www.instagram.com/p/' + item.shortcode + '/" target="_blank"><img src="' + item.thumbnail_src + '" /></a></div>';
       });
+
       $instagram_content.html(output);
     }
   });
