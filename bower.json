@@ -2,13 +2,12 @@
   "name": "resumeontheweb",
   "private": true,
   "dependencies": {
-    "bootstrap": "~4.0.0-beta",
+    "jquery": "^3.3.1",
     "modernizr": "~2.8.1",
     "switchery": "^0.8.2",
     "scrollreveal": "^3.3.5",
     "jquery-dateFormat": "^1.0.2",
     "lightbox2": "^2.9.0",
-    "percircle": "^1.0.17",
     "jquery-form": "^4.2.1",
     "jquery-validation": "jquery-validate#^1.16.0"
   },

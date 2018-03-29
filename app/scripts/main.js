@@ -114,7 +114,7 @@ $(function() {
     success: function(response) {
       var output = '';
 
-      $.each(response.images, function(k, item) {
+      $.each(response.posts, function(k, item) {
         output += '<div class="insta-box"><a href="https://www.instagram.com/p/' + item.shortcode + '/" target="_blank"><img src="' + item.thumbnail_src + '" /></a></div>';
       });
 
