@@ -1,6 +1,6 @@
 <?php
   header('Access-Control-Allow-Origin: *');
-  if ( null != isset($_POST['contactme'] )) {
+  if ( isset($_POST['contactme'] )) {
     if ( (isset($_POST['name'])) && (isset($_POST['email']) && $_POST['message'] != '') ) {
       $to = 'im.amruth@gmail.com';
       $subject = 'Message from Amruth Pillai\'s Resume on the Web';
