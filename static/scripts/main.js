@@ -37,7 +37,7 @@ $(document).ready(function () {
   });
 
   $('[data-toggle="popover"]').popover();
-  window.ScrollReveal().reveal('.section', { origin: 'top' });
+  // window.ScrollReveal().reveal('.section', { origin: 'top' });
   $(photos).preload();
 
   $('.hexagon').css({ 'background-image': 'url(\'https://amruthpillai.com/images/photos/' + photos[0] + '.jpg\')' });
@@ -161,4 +161,3 @@ $(function () {
     });
   });
 });
-//# sourceMappingURL=main.js.map
